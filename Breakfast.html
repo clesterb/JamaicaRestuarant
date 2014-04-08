@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
+</script>
+<script src="SorceCode.js"></script>
+<link href="MyCSS.css" rel="stylesheet" type= "text/css">
+<script>
+$(document).ready(function(){
+	$("#slide").click(function(){
+		$("#Bform").slideDown("slow");
+	});
+});
+</script>
+</head>
+<h1>
+Breakfast<br>
+Breakfast is served between the hours of 5am-11am
+</h1>
+<h2>
+<strong>These are served with Boil or Fry Dumplings</strong>
+</h2>
+<body>
+<div id="container">
+<div id="fortable">
+<table>
+<tr>
+<td>
+<img src= "Ackee&Saltfish.jpg"  height="200" width="400">Ackee&Saltfish
+<button type="button" onclick = "smAckee()"> Small $8</button>
+<button type="button" onclick = "medAckee()"> Meduim $10</button>
+<button type="button" onclick = "larAckee()"> Large $12</button>
+</td>
+
+<td>
+<img src="Mackerel.jpg" height="200" width="400">Mackerel
+<button type="button" onclick = "smMac()"> Small $5</button>
+<button type="button" onclick = "medMac()"> Meduim $7</button>
+<button type="button" onclick = "larMac() "> Large $9</button>
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="Callaloo-Saltfish.jpg" height="200" width="400">Callalo&Saltfish
+<button type="button" onclick = "smCaSa()"> Small $5</button>
+<button type="button" onclick = "medCaSa()"> Meduim $7</button>
+<button type="button" onclick = "larCaSa()"> Large $9</button>
+</td>
+
+<td>
+<img src="FryFish.jpg" height="200" width="400">Fry Fish
+<button type="button" onclick = "smFfish()"> Small $5</button>
+<button type="button" onclick = "medFfish()"> Meduim $7</button>
+<button type="button" onclick = "larFfish() "> Large $9</button>
+</td>
+</tr>
+</table>
+</div>
+
+<div id="total">
+<h3 align="center" style="color:green;"><u><strong>YOUR ORDER</strong></u></h3>
+<p id="ASsm"></p>
+<p id="ASmed"></p>
+<p id="ASlar"></p>
+<p id="Macsm"></p>
+<p id="Macmed"></p>
+<p id="Maclar"></p>
+<p id="CaSasm"></p>
+<p id="CaSamed"></p>
+<p id="CaSalar"></p>
+<p id="Ffishsm"></p>
+<p id="Ffishmed"></p>
+<p id="Ffishlar"></p>
+<p id="tax"></p>
+<p id="totals"></p>
+<br>
+<center><button id="slide" type="button"> CheckOut</button></center>
+<br>
+<form name= "Bform"  method="post" onsubmit="return BreakForm();" id="Bform">
+First Name:<input type="text" name="fname"><br>
+Last Name:<input type="text" name="Lname"><br>
+&nbsp&nbsp&nbsp&nbspAddress:<input type="text" name="address"><br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspState:<input type="text" name="state"><br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCity:<input type="text" name="city"><br>
+&nbsp&nbspZip Code:<input type="text" name="zip">
+&nbsp&nbspTelephone<input ="text" name="tel">
+<center><input type="submit" value="Submit"></center>
+</form>
+</div>
+
+</div>
+</table>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="SorceCode.js"></script>
+<link href="MyCSS.css" rel="stylesheet" type= "text/css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
+</script>
+<title> Dinner Menu</title>
+<script>
+$(document).ready(function(){
+	$("#slide").click(function(){
+		$("#myForm").slideDown("slow");
+	});
+});
+</script>
+</head>
+<h1>
+ Dinner<br>
+ Dinner is served between the hours of 3pm-12am
+</h1>
+<h2>
+<strong>These are served with White Rice or Rice&Peas</strong>
+</h2>
+<body>
+<div id ="container" >
+<div id="fortable">
+<table>
+<tr>
+<td>
+<img src= "Oxtail.jpg"  height="200" width="400">Oxtail
+<button type="button" onclick ="smOxtail()"> Small $7</button>
+<button type="button" onclick ="medOxtail()"> Meduim $9</button>
+<button type="button" onclick ="larOxtail()"> Large $11</button>
+</td>
+
+<td>
+<img src="BarbecueChicken.jpg" height="200" width="400">Barbecue Chicken
+<button type="button" onclick = "smBar()"> Small $5</button>
+<button type="button" onclick = "medBar()"> Meduim $7</button>
+<button type="button" onclick = "larBar()"> Large $9</button>
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="Curry-Goat.jpg" height="200" width="400">Curry Goat
+<button type="button" onclick = "smCurG()"> Small $5</button>
+<button type="button" onclick = "medCurG()"> Meduim $7</button>
+<button type="button" onclick = "larCurG()"> Large $9</button>
+</td>
+
+<td>
+<img src="StewChicken.jpg" height="200" width="400">Stew Chicken
+<button type="button" onclick = "smStew()"> Small $5</button>
+<button type="button" onclick = "medStew()"> Meduim $7</button>
+<button type="button" onclick = "larStew()"> Large $9</button>
+</td>
+</tr>
+</table>
+</div>
+<div id="total">
+<h3 align="center" style="color:green;"><u><strong>YOUR ORDER</strong></u></h3>
+<p id="Oxsm"></p>
+<p id="Oxmed"></p>
+<p id="Oxlar"></p>
+<p id="Barsm"></p>
+<p id="Barmed"></p>
+<p id="Barlar"></p>
+<p id="Cursm"></p>
+<p id="Curmed"></p>
+<p id="Curlar"></p>
+<p id="Stsm"></p>
+<p id="Stmed"></p>
+<p id="Stlar"></p>
+<p id="tax"></p>
+<p id="totals"></p>
+<br>
+<br>
+<center><button id="slide" type="button"> CheckOut</button></center>
+<br>
+<form name="myForm" onsubmit="return validationForm();" method="post" id="myForm">
+First Name:<input type="text" name="fname"><br>
+ Last Name:<input type="text" name="Lname"><br>
+&nbsp&nbsp&nbsp&nbspAddress:<input type="text" name="address"><br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspState:<input type="text" name="state"><br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCity:<input type="text" name="city"><br>
+&nbsp&nbspZip Code:<input type="text" name="zip"><br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspEmail:<input type="text" name="email"><br>
+&nbspTelephone:<input type="text" name="tel">
+<center><input type="submit" value="Submit"></center>
+</form>
+</div>
+</div>
+</body>
+</html>

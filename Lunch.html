@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
+</script>
+<script src="SorceCode.js"></script>
+<link rel="stylesheet" type="text/css" href="lunch.css"> 
+<script>
+$(document).ready(function(){
+	$("#slide").click(function(){
+		$("#Lform").slideDown("slow");
+	});
+});
+</script>
+</head>
+<h1>
+<font size="12" style="color:yellow;"> Lunch</font><br>
+<font size= "5" style="color:black;"> Lunch is served between the hours of 11am-3pm</font>
+</h1>
+<h2>
+<strong>Lunch not served with any other food</strong>
+</h2>
+<body>
+<div id ="container" style= "width:1200px;height:300px;">
+<div style="float:left;" >
+<table align="center">
+
+<tr>
+<td>
+<img src= "Pattycocobread.jpg"  height="200" width="400">Patty & CocoBread
+<button type="button" onclick = "Patty()"> $3</button>
+</td>
+<td><img src="MeatLoaf.jpg" height="200" width="400">Meat Loaf
+<button type="button" onclick = "Meat()">$2.50</button>
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="VegetableLoaf.jpg" height="200" width="400">Vegetable Loaf
+<button type="button" onclick = "VegLoaf()">$2</button>
+</td>
+
+<td>
+<img src="SugarBun.jpg" height="200" width="400">
+Sugar Bun
+<button type="button" onclick = "SugBun()">$3</button>
+</td>
+</tr>
+
+</table>
+</div>
+<div style="width:300px; height:500px; float:right;">
+<h3 align="center" style="color:green;"><u><strong>YOUR ORDER</strong></u></h3>
+<p align="center" id="Patty"></P>
+<p align="center" id="MeatLoaf"></p>
+<p align="center" id="VegLoaf"></p>
+<p align="center" id="SugBun"></p>
+<p align="center" id="tax"></p>
+<p align="center" id="totals"></p>
+<br>
+<center><button id="slide" type="button"> CheckOut</button></center>
+<br>
+<form name= "Lform" method ="post" onsubmit=" return LunForm();" id="Lform">
+First Name:<input type="text" name="fname"><br>
+Last Name:<input type="text" name="Lname"><br>
+&nbsp&nbsp&nbsp&nbspAddress:<input type="text" name="address"><br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspState:<input type="text" name="state"><br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCity:<input type="text" name="city"><br>
+&nbsp&nbspZip Code:<input type="text" name="zip">
+&nbsp Telephone<input ="text" name="tel">
+<center><input type="submit" value="Submit"></center>
+</form>
+</div>
+</body>
+</html>
